@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-zinc-900 font-sans antialiased overflow-hidden;
+  }
+}
+
+.markdown-body {
+  @apply text-zinc-800 leading-relaxed;
+}
+
+.markdown-body h1 { @apply text-lg font-bold mt-4 mb-2; }
+.markdown-body h2 { @apply text-base font-semibold mt-3 mb-2; }
+.markdown-body h3 { @apply text-sm font-medium mt-2 mb-1; }
+.markdown-body p { @apply mb-3 text-sm; }
+.markdown-body ul { @apply list-disc pl-4 mb-3 text-sm; }
+.markdown-body ol { @apply list-decimal pl-4 mb-3 text-sm; }
+.markdown-body li { @apply mb-1; }
+.markdown-body strong { @apply font-semibold text-zinc-950; }
+.markdown-body blockquote { @apply border-l-2 border-zinc-200 pl-3 italic my-3 text-zinc-500; }
+.markdown-body code { @apply bg-zinc-100 px-1 rounded font-mono text-xs; }
+.markdown-body pre { @apply bg-zinc-900 text-zinc-100 p-3 rounded-lg overflow-x-auto my-3 font-mono text-xs; }
+.markdown-body table { @apply w-full border-collapse my-3 text-xs; }
+.markdown-body th { @apply bg-zinc-50 border border-zinc-100 p-2 text-left font-semibold; }
+.markdown-body td { @apply border border-zinc-100 p-2; }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
